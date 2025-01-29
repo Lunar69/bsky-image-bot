@@ -5,17 +5,13 @@ dotenv.config();
 
 // EDIT THIS!
 function postTextFromImageName(imageName: string): string {
-  const hashtags = ['#a'];
-  // Add more hashtags as needed
-  const baseText = 'Image from ' + imageName;
-  return `${baseText} ${hashtags.join(' ')}`;
-}
+  // Add a hashtag to the end of the text
+  return `i dont need this lmao #${imageName}`;
 }
 
 // EDIT THIS!
 function altTextFromImageName(imageName: string): string {
-  return 'Image from ' + postTextFromImageName(imageName);
-  // return '#ai #aiart #aiartwork #stablediffusionart #stablediffusion'
+  return 'A breadbug.';
 }
 
 // Shouldn't have to edit this.
@@ -29,8 +25,6 @@ async function main() {
     path: nextImage.absolutePath,
     text: postTextFromImageName(nextImage.imageName),
     altText: altTextFromImageName(nextImage.imageName),
-    // text: '#ai #aiart #aiartwork #stablediffusionart #stablediffusion',
-    // altText: 'aiart aiartwork stablediffusionart stablediffusion.',
   });
 }
 
