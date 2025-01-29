@@ -4,6 +4,18 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
+
+// EDIT THIS!
+function postTextFromImageName(imageName: string): string {
+  // Remove the file extension and parse the date
+const imageName.replace('.jpg', '').split('-');
+}
+
+// EDIT THIS!
+function altTextFromImageName(imageName: string): string {
+return 'Image from ' + postTextFromImageName(imageName);
+}
+
 async function main() {
   const { LAST_IMAGE_NAME: lastImageName } = process.env;
 
@@ -13,8 +25,8 @@ async function main() {
 
   await postImage({
     path: nextImage.absolutePath,
-    text: '',
-    altText: '',
+    text: postTextFromImageName(nextImage.imageName),
+    altText: altTextFromImageName(nextImage.imageName),
   });
 }
 
