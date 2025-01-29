@@ -8,7 +8,7 @@ dotenv.config();
 // EDIT THIS!
 function postTextFromImageName(imageName: string): string {
   // Remove the file extension and parse the date
-const imageName.replace('.jpg', '').split('-');
+const imageName = imageName.replace('.jpg', '').split('-');
 }
 
 // EDIT THIS!
