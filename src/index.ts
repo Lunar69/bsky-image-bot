@@ -5,8 +5,11 @@ dotenv.config();
 
 // EDIT THIS!
 function postTextFromImageName(imageName: string): string {
-  //return 'b';
-  hashtag = '#aiart';
+  const hashtags = ['#a'];
+  // Add more hashtags as needed
+  const baseText = 'Image from ' + imageName;
+  return `${baseText} ${hashtags.join(' ')}`;
+}
 }
 
 // EDIT THIS!
