@@ -6,7 +6,7 @@ dotenv.config();
 // EDIT THIS!
 function postTextFromImageName(imageName: string): string {
   //return 'b';
-  const hashtag = '#aiart';
+  hashtag = '#aiart';
 }
 
 // EDIT THIS!
