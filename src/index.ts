@@ -4,14 +4,17 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 // EDIT THIS!
-function postTextFromImageName(): string {
-  // Add a default text and a hashtag link
-  return `i dont need this lmao #[tt](#tt #uu)`;
+function postTextFromFilename(filename: string): string {
+  // Remove the file extension
+  const nameWithoutExtension = filename.split('.')[0];
+
+  // Return the filename
+  return nameWithoutExtension;
 }
 
 // EDIT THIS!
-function altTextFromImageName(imageName: string): string {
-  return 'gg.';
+function altTextFromFilename(filename: string): string {
+  return 'Image from ' + postTextFromFilename(filename);
 }
 
 // Shouldn't have to edit this.
@@ -23,8 +26,8 @@ async function main() {
 
   await postImage({
     path: nextImage.absolutePath,
-    text: postTextFromImageName(),
-    altText: altTextFromImageName(nextImage.imageName),
+    text: postTextFromFilename(nextImage.imageName),
+    altText: altTextFromFilename(nextImage.imageName),
   });
 }
 
