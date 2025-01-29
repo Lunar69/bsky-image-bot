@@ -5,7 +5,7 @@ dotenv.config();
 
 // EDIT THIS!
 function postTextFromImageName(imageName: string): string {
-  return 'UwU';
+  return '#aiart b';
 }
 
 // EDIT THIS!
