@@ -4,14 +4,14 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 // EDIT THIS!
-function postTextFromImageName(imageName: string): string {
-  // Add a hashtag to the end of the text
-  return `i dont need this lmao #${imageName}`;
+function postTextFromImageName(): string {
+  // Add a default text and a hashtag link
+  return `i dont need this lmao #[tt](#tt #uu)`;
 }
 
 // EDIT THIS!
 function altTextFromImageName(imageName: string): string {
-  return 'A breadbug.';
+  return 'gg.';
 }
 
 // Shouldn't have to edit this.
@@ -23,7 +23,7 @@ async function main() {
 
   await postImage({
     path: nextImage.absolutePath,
-    text: postTextFromImageName(nextImage.imageName),
+    text: postTextFromImageName(),
     altText: altTextFromImageName(nextImage.imageName),
   });
 }
